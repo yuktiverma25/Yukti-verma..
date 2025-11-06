@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yukti Verma | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #00ADB5;
+      --bg-light: #f7f7f7;
+      --bg-dark: #121212;
+      --text-light: #222;
+      --text-dark: #eaeaea;
+      --card-light: #ffffff;
+      --card-dark: #1e1e1e;
+      --shadow-light: rgba(0, 0, 0, 0.1);
+      --shadow-dark: rgba(255, 255, 255, 0.05);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    body {
+      background: var(--bg-light);
+      color: var(--text-light);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .dark-mode {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .container {
+      background: var(--card-light);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px var(--shadow-light);
+      max-width: 900px;
+      width: 100%;
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .dark-mode .container {
+      background: var(--card-dark);
+      box-shadow: 0 8px 20px var(--shadow-dark);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 25px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 8px 16px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background: #028a91;
+    }
+
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+      margin-bottom: 15px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      margin-bottom: 25px;
+      color: inherit;
+    }
+
+    .section {
+      margin: 25px 0;
+      text-align: left;
+    }
+
+    .section h3 {
+      color: var(--accent);
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+
+    .section p {
+      line-height: 1.6;
+      text-align: justify;
+      margin-bottom: 12px;
+    }
+
+    .skills, .tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: var(--accent);
+      color: white;
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .tag:hover {
+      background: #028a91;
+    }
+
+    .links a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .links a:hover {
+      text-decoration: underline;
+    }
+
+    .resume-btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 10px 22px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      margin: 15px 0;
+      transition: background 0.3s;
+    }
+
+    .resume-btn:hover {
+      background: #028a91;
+    }
+
+    footer {
+      margin-top: 25px;
+      font-size: 0.9rem;
+      opacity: 0.8;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">🌙 Dark Mode</button>
+
+  <div class="container">
+    <img src="profile.jpg" alt="Yukti Verma" class="profile-img">
+
+    <h1>Yukti Verma</h1>
+    <h2>MCA (Hons) Cyber Security | Web Developer | Digital Marketer</h2>
+
+    <div class="section">
+      <h3>📍 Introduction</h3>
+      <p>Hello! I'm <strong>Yukti Verma</strong>, a passionate tech enthusiast currently pursuing <strong>MCA (Hons.) in Cyber Security</strong> at Lovely Professional University. I’m driven by curiosity and a desire to combine creativity with technology — from building responsive web interfaces to securing systems and optimizing digital presence.</p>
+    </div>
+
+    <div class="section">
+      <h3>💫 About Me</h3>
+      <p>I’m <strong>Yukti Verma</strong> from <strong>Ludhiana, Punjab</strong> — a motivated and detail-oriented learner with a keen interest in technology and innovation. I’m currently pursuing my <strong>MCA (Hons.) in Cyber Security</strong> from Lovely Professional University, where I focus on building strong foundations in secure computing and modern software development.</p>
+
+      <p>I have completed my <strong>BCA</strong> from <strong>GNIMT</strong> under PTU with an overall <strong>8.67 SGPA</strong>. My undergraduate journey strengthened my problem-solving mindset and introduced me to programming, networking, and data management — shaping my approach to technology with precision and creativity.</p>
+
+      <p>Beyond academics, I actively explore <strong>web development</strong>, <strong>digital marketing</strong>, and <strong>content strategy</strong>. I enjoy blending creativity with logic to create impactful online experiences. My goal is to evolve as a cybersecurity professional who can contribute to building secure, user-friendly, and efficient digital ecosystems.</p>
+    </div>
+
+    <div class="section">
+      <h3>💡 Skills</h3>
+      <p><strong>Technical Skills:</strong></p>
+      <div class="skills">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">Python</span>
+        <span class="tag">Git & GitHub</span>
+      </div>
+      <br>
+      <p><strong>Cybersecurity Skills:</strong></p>
+      <div class="skills">
+        <span class="tag">Network Security Basics</span>
+        <span class="tag">Ethical Hacking Fundamentals</span>
+        <span class="tag">Footprinting Techniques</span>
+        <span class="tag">System Hardening Concepts</span>
+      </div>
+      <br>
+      <p><strong>Professional Skills:</strong></p>
+      <div class="skills">
+        <span class="tag">Digital Marketing</span>
+        <span class="tag">SEO</span>
+        <span class="tag">Content Creation</span>
+        <span class="tag">Communication</span>
+        <span class="tag">Team Collaboration</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>🧰 Tools & Platforms</h3>
+      <div class="tools">
+        <span class="tag">GitHub</span>
+        <span class="tag">Google Colab</span>
+        <span class="tag">Kaggle</span>
+        <span class="tag">YouTube Channel Creation</span>
+        <span class="tag">Content Analytics</span>
+      </div>
+      <p style="margin-top:10px;">Created and managed a YouTube channel focused on storytelling and horror content — achieving over <strong>1000+ organic views per short</strong> consistently since its launch.</p>
+    </div>
+
+    <div class="section">
+      <h3>📄 Resume</h3>
+      <button class="resume-btn" onclick="window.open('YuktiVerma_Resume.pdf', '_blank')">Download My Resume</button>
+    </div>
+
+    <div class="section">
+      <h3>📫 Contact</h3>
+      <p><strong>Email:</strong> <a href="mailto:vyukti3@gmail.com">vyukti3@gmail.com</a></p>
+      <p><strong>Phone:</strong> <a href="tel:+919815482196">+91 9815482196</a></p>
+      <p><strong>City:</strong> Ludhiana, Punjab</p>
+    </div>
+
+    <div class="section links">
+      <h3>🌐 Links</h3>
+      <p>
+        <a href="https://github.com/yuktiverma25" target="_blank">GitHub</a> |
+        <a href="https://www.linkedin.com/in/yukti-verma-b096b9351" target="_blank">LinkedIn</a>
+      </p>
+    </div>
+
+    <footer>
+      <p>Thank you for visiting my portfolio — I appreciate your time and interest.</p>
+      <p>© 2025 Yukti Verma | All Rights Reserved</p>
+    </footer>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle('dark-mode');
+      const btn = document.querySelector('.theme-toggle');
+      btn.textContent = document.body.classList.contains('dark-mode')
+        ? '☀️ Light Mode'
+        : '🌙 Dark Mode';
+    }
+  </script>
+</body>
+</html>
